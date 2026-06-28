@@ -15,16 +15,17 @@ const Menu = [
 const NavBar = () => {
     return (
         <div className='absolute top-0 z-2 w-full'>
-            <div className='grid grid-cols-12 w-full h-20 items-center justify-center py-2 px-1 md:px-5'>
-                <div className='col-span-2'>
+            <div className='grid grid-cols-12 w-full h-20 items-center justify-center py-2 px-1 md:px-10'>
+                <div className='col-span-3 flex justify-end w-full '>
                     <Image
                         alt='Icon App'
-                        src={`/images/logo_light.png`}
+                        // src={`/images/logo_light.png`}
+                        src={`/images/logo_dark.png`}
                         width={200}
                         height={50}
                     />
                 </div>
-                <div className='col-span-8 w-full flex justify-center items-center'>
+                <div className='col-span-6 w-full flex justify-center items-center'>
                     <ul className='flex gap-1'>
                         {
                             Menu.map((item) => (
@@ -43,7 +44,7 @@ const NavBar = () => {
                         }
                     </ul>
                 </div>
-                <div className='col-span-2'></div>
+                <div className='col-span-3'></div>
             </div>
         </div>
     )

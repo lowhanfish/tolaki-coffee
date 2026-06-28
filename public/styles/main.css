@@ -1,0 +1,18 @@
+.btn-normal {
+    padding: 10px 20px 10px 20px;
+
+    background-image: linear-gradient(to right, #ffee02, #c37c01);
+    /* border-radius: 12px; */
+    text-shadow: #000000;
+}
+
+.btn-normal:hover {
+    background-image: none;
+    background-color: transparent !important;
+
+    outline: 2px solid #ffee02;
+    outline-offset: -2;
+
+    /* border-width: 2px;
+    border-color: #ffb300; */
+}

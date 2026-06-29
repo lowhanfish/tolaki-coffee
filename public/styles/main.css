@@ -25,7 +25,54 @@
     color: #c9a100;
 }
 
+.list-button {
+    color: #1a1a1a;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #434343;
+    border-radius: 15px;
+    padding: 5 15;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.list-button:hover {
+    background-color: #da9b30;
+    border-color: #da9b30;
+    color: white;
+    font-weight: bold;
+}
+
 .title-text {
     font-size: 12px;
     font-weight: bold;
+}
+
+.title-header-1 {
+    font-size: 50px;
+}
+
+.title-header-2 {
+    font-size: 50px;
+}
+
+.title-header-3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.text-item-header {
+    color: #434343;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.text-item-body {
+    color: #434343;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.text-item-regular {
+    font-size: 15px;
 }

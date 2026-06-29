@@ -14,7 +14,7 @@ const Menu = [
 
 const NavBar = () => {
     return (
-        <div className='absolute top-0 z-2 w-full'>
+        <div className='absolute top-0 z-2 w-full hidden md:block'>
             <div className='grid grid-cols-12 w-full h-20 items-center justify-center py-2 px-1 md:px-10'>
                 <div className='col-span-3 flex justify-end w-full '>
                     <Image

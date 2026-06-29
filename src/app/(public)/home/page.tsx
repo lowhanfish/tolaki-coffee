@@ -11,10 +11,10 @@ const page = () => {
             <div className='h-full w-full bg'>
                 <HomeHeader />
             </div>
-            <div className=' w-full bg px-30 pt-10'>
+            <div className=' w-full bg px-5 md:px-30 pt-10'>
                 <HomeAbout />
             </div>
-            <div className='w-full bg px-30 pt-10'>
+            <div className='w-full bg px-5 md:px-30 pt-20'>
                 <HomeProduct />
             </div>
         </div>

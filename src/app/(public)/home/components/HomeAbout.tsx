@@ -6,7 +6,7 @@ const HomeAbout = () => {
     return (
 
         <div className='grid grid-cols-9 items-center'>
-            <div className='col-span-4'>
+            <div className='col-span-9 md:col-span-4'>
                 <p className='title-text color-main'>TENTANG KAMI</p>
                 <div className='text-neutral-900 pt-2 text-[35px] font-bold'>
                     <p className='text-[50px]'>Kopi Tolaki</p>
@@ -19,13 +19,13 @@ const HomeAbout = () => {
                     </p>
                 </div>
 
-                <button className='mt-6 cursor-pointer border-2 border-neutral-800 text-neutral-800 rounded-md text-[12px] font-bold px-5 py-1'>
+                <button className='mt-6 cursor-pointer list-button'>
                     Selengkapnya Tentang Kami
                 </button>
             </div>
-            <div className='col-span-5 h-full relative bg-linear-to-b from-amber-500 to-amber-300 rounded-2xl'>
+            <div className='col-span-9 md:col-span-5 h-full relative bg-linear-to-b from-amber-500 to-amber-300 rounded-2xl'>
                 <Image
-                    src={`/images/about.jpg`}
+                    src={`/images/about.png`}
                     alt='About Image'
                     className='object-cover rounded-2xl relative shadow-[inset_0_0_50px_rgba(15,23,42,0.7)]'
                     height={300}

@@ -11,22 +11,22 @@ const HomeHeader = () => {
                 className='object-fill h-full w-full object-center -z-1'
             />
 
-            <div className=' x-10 h-full w-full flex items-center z-999'>
-                <div className='grid grid-cols-12'>
-                    <div className='col-span-6'>
-                        <div>
-                            <p className='text-white md:text-[70px] font-bold'>Rasa Asli</p>
-                            <p className='text-amber-500 md:text-[70px] font-bold -mt-10'>Bangga Lokal</p>
+            <div className='h-full w-full flex items-center z-999'>
+                <div className='grid grid-cols-12 w-full'>
+                    <div className='col-span-12 md:col-span-6 '>
+                        <div className='text-center md:text-left'>
+                            <p className='text-white text-[50px] md:text-[70px] font-bold'>Rasa Asli</p>
+                            <p className='text-amber-500 text-[50px] md:text-[70px] font-bold -mt-7 md:-mt-10'>Bangga Lokal</p>
                             <div>
                                 <p>Kopi Pilihan dari Petani Lokal Sulawesi Tenggara,</p>
                                 <p>diolah dengan hati, untuk cita rasa terbaik.</p>
                             </div>
                         </div>
-                        <div className='flex gap-3 pt-5'>
-                            <button className='color-main btn-normal w-5]'>
+                        <div className='flex flex-col md:flex-row gap-3 pt-5 px-5 md:px-0'>
+                            <button className='btn-normal rounded-md'>
                                 <p>Belanja Sekarang</p>
                             </button>
-                            <button className='border-2  w-50'>
+                            <button className='btn-normal rounded-md'>
                                 <p>Kenali Kami</p>
                             </button>
                         </div>

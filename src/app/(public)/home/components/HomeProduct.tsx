@@ -28,16 +28,18 @@ const HomeProduct = () => {
                 </div>
             </div>
 
-            <div className='flex flex-col md:flex-row gap-3 w-full '>
+            <div className='grid grid-cols-12 md:flex-row gap-3 w-full pt-3'>
                 {
                     List.map((item, index) => (
-                        <ProductItem
-                            key={index}
-                            item={item}
-                        />
+                        <div className='col-span-12 md:col-span-6 xl:col-span-3' key={index}>
+                            <ProductItem
+                                item={item}
+                            />
+                        </div>
 
                     ))
                 }
+
 
             </div>
 

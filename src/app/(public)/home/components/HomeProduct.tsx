@@ -1,5 +1,15 @@
-import Image from 'next/image'
 import React from 'react'
+import Image from 'next/image'
+import { BsArrowRight, BsBagPlus } from "react-icons/bs";
+import ProductItem from '@/components/ProductItem';
+
+
+const List = [
+    { id: 3, title: "Arabica Coffee", subtitle: "Medium Roast", price: 85000, sat: "200gr", img: "/images/kopi3.png" },
+    { id: 1, title: "Tubruk Robusta", subtitle: "Medium Roast", price: 85000, sat: "200gr", img: "/images/kopi1.png" },
+    { id: 4, title: "Kopi Tolaki", subtitle: "Medium Roast", price: 85000, sat: "200gr", img: "/images/kopi4.png" },
+    { id: 2, title: "Tolaki Robusta", subtitle: "Medium Roast", price: 85000, sat: "200gr", img: "/images/kopi2.png" },
+]
 
 
 const HomeProduct = () => {
@@ -11,35 +21,20 @@ const HomeProduct = () => {
                     <p className='title-header-3'>Produk Pilihan Kami</p>
                 </div>
                 <div className='flex-1 flex w-full justify-end'>
-                    <button className='list-button cursor-pointer'>
-                        Lihat Semua Product
+                    <button className='list-button cursor-pointer flex gap-2 justify-center items-center'>
+                        <p>Lihat Semua Product</p>
+                        <BsArrowRight />
                     </button>
                 </div>
             </div>
 
-            <div className='flex flex-col md:flex-row gap-3 w-full'>
+            <div className='flex flex-col md:flex-row gap-3 w-full '>
                 {
-                    [...Array(4)].map((item, index) => (
-                        <div className='flex-1 bg-white rounded-lg' key={index}>
-                            <div className='relative h-50'>
-                                <Image
-                                    src={`/images/kopi1.png`}
-                                    alt='Product'
-                                    fill
-                                    className='object-cover rounded-t-lg'
-                                />
-                            </div>
-                            <div className='px-5 py-3'>
-                                <div>
-                                    <p className='text-item-header'>Kopi Tolaki</p>
-                                    <p className='text-item-body'>Medium Roast</p>
-                                    <p className='text-item-regular pt-2'><span className='text-item-header'>Rp. 85.000</span>/200gr</p>
-                                </div>
-                                <div>
-
-                                </div>
-                            </div>
-                        </div>
+                    List.map((item, index) => (
+                        <ProductItem
+                            key={index}
+                            item={item}
+                        />
 
                     ))
                 }

@@ -3,7 +3,12 @@ import React from 'react'
 const HomeProduct = () => {
     return (
         <div>
-            <h1>Product</h1>
+            <p>ETALASE PRODUK</p>
+            <div>
+                <div>
+
+                </div>
+            </div>
         </div>
     )
 }

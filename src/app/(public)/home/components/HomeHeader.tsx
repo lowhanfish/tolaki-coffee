@@ -8,8 +8,9 @@ const HomeHeader = () => {
                 src={`/images/header.png`}
                 fill
                 alt='Header Image'
-                className='object-cover h-full object-center -z-1'
+                className='object-fill h-full w-full object-center -z-1'
             />
+
             <div className=' x-10 h-full w-full flex items-center z-999'>
                 <div className='grid grid-cols-12'>
                     <div className='col-span-6'>

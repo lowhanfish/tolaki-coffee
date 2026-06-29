@@ -24,3 +24,8 @@
 .color-main {
     color: #c9a100;
 }
+
+.title-text {
+    font-size: 12px;
+    font-weight: bold;
+}

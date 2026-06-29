@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const HomeHeader = () => {
     return (
-        <div className='h-full w-full flex items-center justify-center overflow-hidden bg-[#f1ece5] relative z-1 py-2 px-1 md:px-30'>
+        <div className='h-full w-full flex items-center justify-center overflow-hidden relative z-1 py-2 px-1 md:px-30'>
             <Image
                 src={`/images/header.png`}
                 fill

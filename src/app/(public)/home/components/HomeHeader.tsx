@@ -3,12 +3,16 @@ import Image from 'next/image';
 
 const HomeHeader = () => {
     return (
-        <div className='h-full w-full flex items-center justify-center overflow-hidden relative z-1 py-2 px-1 md:px-30'>
+        <div className='relative w-full h-160 md:h-110 lg:h-140 xl:h-170 flex items-center justify-center overflow-hidden z-1 py-2 px-1 md:px-30'>
+            <div className='block md:hidden absolute inset-0 bg-linear-to-b from-black to-transparent opacity-90'>
+
+            </div>
+
             <Image
                 src={`/images/header.png`}
                 fill
                 alt='Header Image'
-                className='object-fill h-full w-full object-center -z-1'
+                className='object-cover md:object-fill w-full object-center -z-1'
             />
 
             <div className='h-full w-full flex items-center z-999'>

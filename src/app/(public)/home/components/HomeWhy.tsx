@@ -15,7 +15,7 @@ const List = [
 
 const HomeWhy = () => {
     return (
-        <div className='relative h-75 w-full overflow-hidden isolate'>
+        <div className='relative md:h-130 lg:h-120 xl:h-75 overflow-hidden w-full isolate'>
 
 
             <Image
@@ -28,19 +28,22 @@ const HomeWhy = () => {
             <div className='z-1 absolute inset-0 bg-neutral-900 opacity-85 shadow-[inset_0_0_70px_rgba(0,0,0,0.9)]' />
 
 
-            <div className='z-9 absolute inset-0'>
+            <div className='z-9 relative inset-0 py-10'>
+                <div className='flex justify-center items-center pb-7'>
+                    <p className='color-main font-bold text-[14px]'>KENAPA MEMILIH KOPI TOLAKI?</p>
+                </div>
                 <div className='
-                w-full grid grid-cols-2 lg:grid-cols-4 
+                w-full grid grid-cols-2 xl:grid-cols-4 gap-10 xl:gap-0 
                 justify-center items-center
                 px-3 md:px-8 lg:px-30
                 '>
                     {
                         List.map((item, index) => (
 
-                            <div key={index} className='col-span-2 md:col-span-1
+                            <div key={index} className={`col-span-2 md:col-span-1
                             flex flex-col items-center justify-center
-                            py-10 px-5
-                            '>
+                            px-5 border-r ${index == 0 && 'border-l'} border-neutral-700
+                            `}>
                                 <item.icon className='text-[60px] color-main' />
                                 <div className='text-center opacity-80 mt-3'>
                                     <p className='text-[16px] font-bold'>{item.title}</p>

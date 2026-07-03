@@ -5,8 +5,8 @@ import { BsArrowRight } from "react-icons/bs";
 const HomeAbout = () => {
     return (
 
-        <div className='grid grid-cols-9 items-center'>
-            <div className='col-span-9 xl:col-span-4'>
+        <div className='grid grid-cols-9 gap-3 items-center'>
+            <div className='col-span-9 xl:col-span-5'>
                 <p className='title-text color-main'>TENTANG KAMI</p>
                 <div className='text-neutral-900 pt-2 text-[35px] font-bold'>
                     <p className='text-[50px]'>Kopi Tolaki</p>
@@ -25,16 +25,30 @@ const HomeAbout = () => {
 
                 </button>
             </div>
-            <div className='col-span-9 xl:col-span-5 h-full relative bg-linear-to-b from-amber-500 to-amber-300 rounded-2xl'>
-                <Image
-                    src={`/images/about.png`}
-                    alt='About Image'
-                    className='object-cover rounded-2xl relative shadow-[inset_0_0_50px_rgba(15,23,42,0.7)]'
-                    height={300}
-                    width={500}
-                />
+
+            <div className='col-span-9 xl:col-span-4 w-full rounded-2xl p-2 h-full bg-linear-to-l from-amber-900 via-amber-500 to-transparent'>
+                <div className='relative rounded-2xl '>
+                    <Image
+                        src={`/images/about.png`}
+                        alt='About Image'
+                        className='relative object-cover rounded-2xl z-3 opacity-90 -rotate-5 hover:rotate-0 transition-all duration-300 ease-in-out'
+                        height={300}
+                        width={500}
+                    />
+
+                    <Image
+                        src={`/images/about-bg.png`}
+                        alt='About Image'
+                        className='absolute inset-0 object-center rounded-2xl shadow-[inset_0_0_50px_rgba(15,23,42,0.7)] z-2'
+                        fill
+                    />
+
+                    {/* <div className='absolute inset-0 bg-linear-330 from-black via-amber-700 via-50% to-black opacity-70 z-1 rounded-2xl'>
+
+                    </div> */}
 
 
+                </div>
 
             </div>
 

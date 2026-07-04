@@ -20,24 +20,29 @@ const layout = ({ children }: ChildrensProps) => {
                 <AdminSidebar />
 
                 <div className='w-full flex flex-col'>
-                    <div className='h-17 bg-linear-to-l from-yellow-600 to-yellow-200 items-center p-5 flex flex-row'>
+                    <div className='h-17 bg-linear-to-l from-yellow-600 to-white items-center p-5 flex flex-row shadow-sm'>
                         <div className='flex-1 flex gap-2 items-center'>
                             <div className='rounded-full bg-yellow-400 p-3 cursor-pointer shadow-sm'>
                                 <IoIosMenu />
                             </div>
-                            <p >Dashboard</p>
+                            <p className='text-neutral-600 font-semibold text-[16px]'>Dashboard</p>
                         </div>
-                        <div className='flex-1 flex items-center justify-end'>
-                            <p>Kiken SB</p>
-                            <div>
+                        <div className='flex-1 flex gap-2 items-center justify-end'>
+                            <p className='text-white font-semibold text-[12px]'>Kiken SB</p>
 
-                            </div>
+                            <Image
+                                alt='Image User'
+                                src={`/images/user.png`}
+                                width={39}
+                                height={39}
+                                className='object-center rounded-full border-2 border-white cursor-pointer'
+                            />
                         </div>
                     </div>
 
                     <div className='flex-1 p-[7px_7px_0px_7px] w-full'>
 
-                        <div className='bg-white w-full h-full p-3'>
+                        <div className='bg-white rounded-md w-full h-full p-3'>
                             {children}
                         </div>
                     </div>

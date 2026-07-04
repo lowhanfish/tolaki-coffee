@@ -1,12 +1,14 @@
+import Link from 'next/link'
 import React from 'react'
 
+
 const Menu = [
-    { id: 1, title: "Dashboard", pathh: "/secure/dashboard", icon: "🏢" },
-    { id: 2, title: "Profile", pathh: "/secure/profile", icon: "👤" },
-    { id: 3, title: "Products", pathh: "/secure/products", icon: "🪹" },
-    { id: 4, title: "Farmer/Partnership", pathh: "/secure/farmer", icon: "👨‍🌾" },
-    { id: 5, title: "News", pathh: "/secure/news", icon: "🔖" },
-    { id: 6, title: "Contact", pathh: "/secure/contact", icon: "📧" },
+    { id: 1, title: "Dashboard", path: "/secure/dashboard", icon: "🏢" },
+    { id: 2, title: "Profile", path: "/secure/profile", icon: "👤" },
+    { id: 3, title: "Products", path: "/secure/products", icon: "🪹" },
+    { id: 4, title: "Farmer/Partnership", path: "/secure/farmer", icon: "👨‍🌾" },
+    { id: 5, title: "News", path: "/secure/news", icon: "🔖" },
+    { id: 6, title: "Contact", path: "/secure/contact", icon: "📧" },
 ]
 
 
@@ -16,11 +18,12 @@ const AdminSidebar = () => {
             <div className='px-5 py-5'>
                 {
                     Menu.map((item, index) => (
-
-                        <div className='div-menu cursor-pointer' key={index}>
-                            <div className='icon-admin-menu'>{item.icon}</div>
-                            <div className='text-admin-menu'>{item.title}</div>
-                        </div>
+                        <Link key={index} className='' href={item.path}>
+                            <div className='div-menu cursor-pointer'>
+                                <div className='icon-admin-menu'>{item.icon}</div>
+                                <div className='text-admin-menu'>{item.title}</div>
+                            </div>
+                        </Link>
                     ))
                 }
 

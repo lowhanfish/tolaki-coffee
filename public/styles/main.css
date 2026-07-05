@@ -1,20 +1,14 @@
 .btn-normal {
     padding: 10px 20px 10px 20px;
-
     background-image: linear-gradient(to right, #ffee02, #c37c01);
-    /* border-radius: 12px; */
     text-shadow: #000000;
 }
 
 .btn-normal:hover {
     background-image: none;
     background-color: transparent !important;
-
     outline: 2px solid #ffee02;
     outline-offset: -2;
-
-    /* border-width: 2px;
-    border-color: #ffb300; */
 }
 
 .bg {
@@ -95,4 +89,40 @@
 
 .icon-admin-menu {
     font-size: 20px;
+}
+
+.form-input {
+    display: flex;
+    align-items: center;
+    border-style: solid;
+    border-width: 0.1px;
+    border-color: #9c9c9c;
+    border-radius: 6px;
+    width: 100%;
+}
+
+.input-form {
+    /* border-style: solid;
+    border-width: 1px;
+    border-color: #585656; */
+    border-radius: 5px 0px 0px 5px;
+    height: 40px;
+    background-color: white;
+    width: 100%;
+}
+
+.btn-form {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    height: 40px;
+    width: 45px;
+    background-color: #c37c01;
+    color: white;
+    border-radius: 0px 5px 5px 0px;
+    cursor: pointer;
+}
+
+.btn-form:hover {
+    background-color: #d7a144;
 }

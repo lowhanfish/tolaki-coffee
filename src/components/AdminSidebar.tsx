@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
 
-
 const Menu = [
     { id: 1, title: "Dashboard", path: "/secure/dashboard", icon: "🏢" },
     { id: 2, title: "Profile", path: "/secure/profile", icon: "👤" },
@@ -10,7 +9,6 @@ const Menu = [
     { id: 5, title: "News", path: "/secure/news", icon: "🔖" },
     { id: 6, title: "Contact", path: "/secure/contact", icon: "📧" },
 ]
-
 
 const AdminSidebar = () => {
     return (

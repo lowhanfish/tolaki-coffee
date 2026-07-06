@@ -1,5 +1,9 @@
 'use client'
+import Button from "@/components/items/Button"
 import Modal from "@/components/items/Modal"
+import { BsFillPencilFill, BsFillTrashFill } from "react-icons/bs";
+import { FaMagnifyingGlass } from "react-icons/fa6";
+
 import Image from "next/image"
 import { useState } from 'react'
 
@@ -11,7 +15,25 @@ const List = [
     { id: 2, title: "Tolaki Robusta", subtitle: "Medium Roast", stock: 12, price: 85000, vol: "200gr", img: "/images/kopi2.png" },
 ]
 
+
+interface objxProps {
+    satu: string,
+    dua: string,
+    tiga: string,
+}
+
+const Objx = {
+    satu: "Dimas",
+    dua: "Rizwan",
+    tiga: "Dayat",
+}
+
 const page = () => {
+
+
+    const test = () => {
+        alert("Hy saya di click")
+    }
 
     const [modal, SetModal] = useState<boolean>(false)
 
@@ -57,8 +79,29 @@ const page = () => {
                     }
                 </div>
             </div>
+
+
             <Modal size="xxs" openModal={modal} setOpenModal={SetModal} color="dark" title="Config">
-                <h1>sfds</h1>
+                <div className="flex gap-2 flex-col py-5">
+                    <Button color="primary" size="h-6" type="rounded">
+                        <div className="item-btn-primary text-[12px]">
+                            <FaMagnifyingGlass />
+                            <p className="">Detail</p>
+                        </div>
+                    </Button>
+                    <Button color="warning" size="h-6" type="rounded">
+                        <div className="item-btn-warning text-[12px]">
+                            <BsFillPencilFill />
+                            <p className="">Update</p>
+                        </div>
+                    </Button>
+                    <Button color="danger" size="h-6" type="rounded" onClick={test}>
+                        <div className="item-btn-danger text-[12px]">
+                            <BsFillTrashFill />
+                            <p className="">Delete</p>
+                        </div>
+                    </Button>
+                </div>
             </Modal>
         </div>
     )

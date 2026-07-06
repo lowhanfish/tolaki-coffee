@@ -1,0 +1,24 @@
+@mixin btn-general {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.item-btn-danger {
+    @include btn-general;
+    color: white;
+};
+
+.item-btn-warning {
+    @include btn-general;
+    color: white;
+}
+.item-btn-success {
+    @include btn-general;
+    color: #535353;
+}
+.item-btn-primary {
+    @include btn-general;
+    color: #474747;
+}

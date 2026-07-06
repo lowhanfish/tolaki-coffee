@@ -13,6 +13,8 @@ const HomeHeader = () => {
                 fill
                 alt='Header Image'
                 className='object-cover md:object-fill w-full object-center -z-1'
+                priority
+
             />
 
             <div className='h-full w-full flex items-center z-999'>

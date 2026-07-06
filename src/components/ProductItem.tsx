@@ -25,6 +25,8 @@ const ProductItem = ({ item }: ProductItemProps) => {
                     alt='Product'
                     fill
                     className='object-cover rounded-t-lg'
+                    priority
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 />
             </div>
             <div className='px-5 py-3 relative'>

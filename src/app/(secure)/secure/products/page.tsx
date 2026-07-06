@@ -1,4 +1,8 @@
+'use client'
+import Modal from "@/components/items/Modal"
 import Image from "next/image"
+import { useState } from 'react'
+
 
 const List = [
     { id: 3, title: "Arabica Coffee", subtitle: "Medium Roast", stock: 12, price: 85000, vol: "200gr", img: "/images/kopi3.png" },
@@ -8,8 +12,11 @@ const List = [
 ]
 
 const page = () => {
+
+    const [modal, SetModal] = useState<boolean>(false)
+
     return (
-        <div className='relative'>
+        <div className=''>
             <div className='bg h-15 grid grid-cols-3 px-3'>
                 <div className="col-span-1 flex items-center w-full">
                     <div className="form-input">
@@ -27,7 +34,7 @@ const page = () => {
                         List.map((item, index) => (
                             <div key={index} className="col-span-3 p-2 border border-neutral-300 rounded-sm">
                                 <div className="relative h-40">
-                                    <div className="h-7 w-7 flex justify-center items-center absolute right-1 top-1 bg-amber-200 rounded-full cursor-pointer z-1 border-2 border-white">
+                                    <div onClick={() => SetModal(!modal)} className="h-7 w-7 flex justify-center items-center absolute right-1 top-1 bg-amber-200 rounded-full cursor-pointer z-1 border-2 border-white">
                                         <span className="text-16px">⚙️</span>
                                     </div>
                                     <Image
@@ -35,6 +42,8 @@ const page = () => {
                                         src={item.img}
                                         fill
                                         className="object-cover"
+                                        priority
+                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                                     />
                                 </div>
                                 <div className="pt-2">
@@ -46,10 +55,11 @@ const page = () => {
 
                         ))
                     }
-
-
                 </div>
             </div>
+            <Modal size="xxs" openModal={modal} setOpenModal={SetModal} color="dark" title="Config">
+                <h1>sfds</h1>
+            </Modal>
         </div>
     )
 }

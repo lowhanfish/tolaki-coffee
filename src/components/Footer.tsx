@@ -15,6 +15,9 @@ const Footer = () => {
                             alt='Logo'
                             width={200}
                             height={50}
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                            priority
+                            style={{ width: '60%', height: 'auto' }}
                         />
                     </div>
                     <p className='pt-5 text-[12px] text-center xl:text-left'>

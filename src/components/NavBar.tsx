@@ -19,10 +19,13 @@ const NavBar = () => {
                 <div className='col-span-3 flex justify-end w-full '>
                     <Image
                         alt='Icon App'
-                        // src={`/images/logo_light.png`}
                         src={`/images/logo_dark.png`}
-                        width={200}
-                        height={50}
+                        width={100}
+                        height={10}
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                        priority
+                        loading="eager"
+                        style={{ width: '60%', height: 'auto' }}
                     />
                 </div>
                 <div className='col-span-6 w-full flex justify-center items-center'>

@@ -18,6 +18,9 @@ const colorMap: Record<string, string> = {
 const modelMap: Record<string, string> = {
     rounded: "rounded-full",
     box: "rounded-sm ",
+}
+
+const sizeMap: Record<string, string> = {
 
 }
 

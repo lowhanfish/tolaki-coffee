@@ -22,3 +22,13 @@
     @include btn-general;
     color: #474747;
 }
+
+.input-field{
+    height: 36px;
+    border-style: solid;
+    border-width: 0.1px;
+    border-color: #535353;
+    padding: 0px 10px 0px 10px;
+    border-radius: 5px;
+    background-color: white;
+}

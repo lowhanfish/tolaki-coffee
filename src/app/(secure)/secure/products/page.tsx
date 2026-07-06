@@ -1,13 +1,17 @@
 'use client'
-import Button from "@/components/items/Button"
-// import Modal from "@/components/items/Modal"
+
+import { useState } from 'react'
 
 import { BsFillPencilFill, BsFillTrashFill } from "react-icons/bs";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 
 import Image from "next/image"
-import { useState } from 'react'
-import ModalTest from "@/components/items/ModalTest";
+import Button from "@/components/items/Button"
+import Modal from "@/components/items/Modal"
+import Create from './components/create';
+
+
+
 
 
 const List = [
@@ -38,6 +42,7 @@ const page = () => {
     }
 
     const [modal, SetModal] = useState<boolean>(false)
+    const [modalCreate, SetModalCreate] = useState<boolean>(false)
 
     return (
         <div className=''>
@@ -45,7 +50,9 @@ const page = () => {
                 <div className="col-span-1 flex items-center w-full">
                     <div className="form-input">
                         <input className="input-form" type="text" />
-                        <button className="btn-form">
+                        <button className="btn-form"
+                            onClick={() => SetModalCreate(!modalCreate)}
+                        >
                             <p className="text-center w-full">+</p>
                         </button>
                     </div>
@@ -82,17 +89,10 @@ const page = () => {
                 </div>
             </div>
 
-            <ModalTest
-                isShow={modal}
-                setIsShow={SetModal}
-                className="w-400 bg-blue-400"
-            >
-
-                anjiiiir
-            </ModalTest>
 
 
-            {/* <Modal size="xxs" openModal={modal} setOpenModal={SetModal} color="dark" title="Config">
+
+            <Modal size="xxs" openModal={modal} setOpenModal={SetModal} color="dark" title="Config">
                 <div className="flex gap-2 flex-col py-5">
                     <Button color="primary" size="h-6" type="rounded">
                         <div className="item-btn-primary text-[12px]">
@@ -113,7 +113,18 @@ const page = () => {
                         </div>
                     </Button>
                 </div>
-            </Modal> */}
+            </Modal>
+
+
+            <Create
+                modal={modalCreate}
+                SetModal={SetModalCreate}
+            />
+
+
+
+
+
         </div>
     )
 }

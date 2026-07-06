@@ -1,11 +1,13 @@
 'use client'
 import Button from "@/components/items/Button"
-import Modal from "@/components/items/Modal"
+// import Modal from "@/components/items/Modal"
+
 import { BsFillPencilFill, BsFillTrashFill } from "react-icons/bs";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 
 import Image from "next/image"
 import { useState } from 'react'
+import ModalTest from "@/components/items/ModalTest";
 
 
 const List = [
@@ -80,8 +82,17 @@ const page = () => {
                 </div>
             </div>
 
+            <ModalTest
+                isShow={modal}
+                setIsShow={SetModal}
+                className="w-400 bg-blue-400"
+            >
 
-            <Modal size="xxs" openModal={modal} setOpenModal={SetModal} color="dark" title="Config">
+                anjiiiir
+            </ModalTest>
+
+
+            {/* <Modal size="xxs" openModal={modal} setOpenModal={SetModal} color="dark" title="Config">
                 <div className="flex gap-2 flex-col py-5">
                     <Button color="primary" size="h-6" type="rounded">
                         <div className="item-btn-primary text-[12px]">
@@ -102,7 +113,7 @@ const page = () => {
                         </div>
                     </Button>
                 </div>
-            </Modal>
+            </Modal> */}
         </div>
     )
 }

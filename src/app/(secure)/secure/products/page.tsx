@@ -79,8 +79,10 @@ const Page = () => {
                 </div>
 
             </div>
-            <div>
-                <Pagination total={999} limit={5} />
+            <div className='grid grid-cols-2 py-5'>
+                <div className='col-span-1'>
+                    <Pagination total={999} limit={5} />
+                </div>
             </div>
 
 

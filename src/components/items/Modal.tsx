@@ -33,7 +33,7 @@ const Modal = ({ size, children, openModal, setOpenModal, color, title }: ModalP
                 openModal && (
 
                     <div className='absolute z-2 bg-black/50 inset-0 flex flex-col justify-center items-center'>
-                        <div className={`bg shadow-md shadow-black/30 min-h-30 flex flex-col rounded-sm ${sizeMap[size]}`}>
+                        <div className={`bg shadow-md shadow-black/30 min-h-30 flex flex-col rounded-sm ${sizeMap[size]} relative overflow-scroll scrollbar-thumb-yellow-600`}>
 
                             <div className={`flex ${color ? colorMap[color] : ''} p-2 rounded-t-sm`}>
                                 <div className='flex-1'>

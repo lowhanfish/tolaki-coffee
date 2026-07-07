@@ -22,19 +22,7 @@ const List = [
 ]
 
 
-interface objxProps {
-    satu: string,
-    dua: string,
-    tiga: string,
-}
-
-const Objx = {
-    satu: "Dimas",
-    dua: "Rizwan",
-    tiga: "Dayat",
-}
-
-const page = () => {
+const Page = () => {
 
 
     const test = () => {
@@ -129,4 +117,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

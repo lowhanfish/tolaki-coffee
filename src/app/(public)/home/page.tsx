@@ -3,11 +3,10 @@ import HomeHeader from './components/HomeHeader'
 import HomeAbout from './components/HomeAbout'
 import HomeProduct from './components/HomeProduct'
 import HomeWhy from './components/HomeWhy'
-import Footer from '@/components/Footer'
 
 
 
-const page = () => {
+const Page = () => {
     return (
         <>
             <div className='w-full'>
@@ -28,4 +27,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

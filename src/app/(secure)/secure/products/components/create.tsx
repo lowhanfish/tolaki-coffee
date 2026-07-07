@@ -5,8 +5,8 @@ import { useState, Dispatch, SetStateAction } from "react"
 import Modal from '@/components/items/Modal'
 import Button from '@/components/items/Button'
 import InputField from "@/components/items/InputField"
-import InputtextArea from "@/components/items/InputtextArea"
 import InputFile from "@/components/items/InputFile"
+import InputRichText from "@/components/items/InputRichText"
 
 
 
@@ -77,26 +77,21 @@ const Create = ({ modal, SetModal }: createProps) => {
                 </div>
 
                 <div className="w-full">
-                    <InputtextArea
+                    {/* <InputtextArea
                         value={form.desc}
                         onChange={(e) => SetObjForm(e, "desc")}
                         title="Product Description"
+                    /> */}
+
+                    <InputRichText
+                        title="Produce Description"
+                        value={form.desc}
+                        onChange={(htmlText) => SetObjForm(htmlText, 'desc')} // Mengirim data HTML kembali ke state 'desc'
                     />
                 </div>
 
                 <div className="w-full">
-                    {/* <input
-                        type="file"
-                        multiple
-                        accept="image/*" // batasi khusus gambar jika ini form produk
-                        onChange={(e) => {
-                            if (e.target.files) {
-                                // Ubah FileList menjadi File[] sebelum dimasukkan ke state
-                                const filesArray = Array.from(e.target.files);
-                                SetObjForm(filesArray, 'img');
-                            }
-                        }}
-                    /> */}
+
 
                     <InputFile
                         title="Product Images"

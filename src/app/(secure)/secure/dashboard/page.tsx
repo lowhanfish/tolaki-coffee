@@ -1,9 +1,8 @@
-import AdminSidebar from '@/components/AdminSidebar'
 import React from 'react'
 
 
 
-const page = () => {
+const Page = () => {
     return (
         <div className='flex-1 h-full '>
             Dashboard
@@ -11,4 +10,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

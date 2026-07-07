@@ -1,6 +1,5 @@
 import React from 'react'
-import Image from 'next/image'
-import { BsArrowRight, BsBagPlus } from "react-icons/bs";
+import { BsArrowRight } from "react-icons/bs";
 import ProductItem from '@/components/ProductItem';
 
 

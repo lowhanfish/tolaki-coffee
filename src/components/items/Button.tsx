@@ -20,22 +20,17 @@ const modelMap: Record<string, string> = {
     box: "rounded-sm ",
 }
 
-const sizeMap: Record<string, string> = {
-
-}
-
 const Button = ({ color, size = 'h-9', children, type = "box", onClick }: ButtonProps) => {
     return (
         <button
+            type="button"
             className={`
                 cursor-pointer
                 border-2 border-white shadow-sm
                 ${color && colorMap[color]} ${size && size} ${type && modelMap[type]}
                 flex gap-2 justify-center items-center px-3 w-full
             `}
-            onClick={(e) => {
-                onClick ? onClick() : false
-            }}
+            onClick={onClick}
         >
             {children}
         </button>

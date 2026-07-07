@@ -1,0 +1,68 @@
+/* Mengecilkan Toolbar dan Tombol SunEditor */
+.sun-editor {
+  border: none !important; // Kita handle border lewat wrapper Tailwind saja
+
+  .se-toolbar {
+    background: var(--color-neutral-50, #f9f9f9) !important;
+    padding: 2px 4px !important;
+    outline: none !important;
+  }
+
+  // Mengatur ukuran tombol di toolbar
+  .se-btn-module {
+    margin: 2px !important;
+    
+    button {
+      width: 28px !important;  // Ukuran default biasanya 34px+
+      height: 28px !important;
+      padding: 0 !important;
+      
+      .se-icon, svg {
+        font-size: 14px !important; // Ukuran icon di dalam tombol
+        width: 14px !important;
+        height: 14px !important;
+      }
+    }
+  }
+
+  // Mengatur dropdown list (seperti pilihan Font / Format) agar ikut mengecil
+  .se-list-layer {
+    button {
+      font-size: 12px !important;
+      padding: 4px 8px !important;
+    }
+  }
+
+  // Merapikan area editing teks di bawah toolbar
+  .se-wrapper {
+    .se-wrapper-inner {
+      padding: 12px !important;
+      font-size: 14px !important; // Membuat teks ketikan standar berita lebih pas
+    }
+  }
+}
+
+/* Penyesuaian untuk Dark Mode jika Anda menggunakannya */
+.dark {
+  .sun-editor {
+    background-color: var(--color-neutral-900, #171717) !important;
+    
+    .se-toolbar {
+      background: var(--color-neutral-800, #262626) !important;
+      border-bottom: 1px solid var(--color-neutral-700, #404040) !important;
+    }
+    
+    .se-btn-module button {
+      color: var(--color-neutral-300, #d4d4d4) !important;
+      
+      &:hover {
+        background-color: var(--color-neutral-700, #404040) !important;
+      }
+    }
+    
+    .se-wrapper {
+      background-color: var(--color-neutral-900, #171717) !important;
+      color: var(--color-neutral-100, #f5f5f5) !important;
+    }
+  }
+}

@@ -31,7 +31,7 @@ const Button = ({ color, size = 'h-9', children, type = "box", onClick }: Button
                 cursor-pointer
                 border-2 border-white shadow-sm
                 ${color && colorMap[color]} ${size && size} ${type && modelMap[type]}
-                flex gap-2 justify-center items-center
+                flex gap-2 justify-center items-center px-3 w-full
             `}
             onClick={(e) => {
                 onClick ? onClick() : false

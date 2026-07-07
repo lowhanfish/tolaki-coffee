@@ -9,6 +9,8 @@ import Image from "next/image"
 import Button from "@/components/items/Button"
 import Modal from "@/components/items/Modal"
 import Create from './components/create';
+import Pagination from '@/components/items/Pagination';
+
 
 
 
@@ -75,6 +77,10 @@ const Page = () => {
                         ))
                     }
                 </div>
+
+            </div>
+            <div>
+                <Pagination total={999} limit={5} />
             </div>
 
 

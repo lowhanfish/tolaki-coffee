@@ -88,34 +88,7 @@ const AdminSidebar = () => {
             <div className='px-5 pt-2 pb-5'>
                 {
                     Menu.map((item, index) => (
-                        <div key={item.id} >
-                            <Link className='' href={item.path}>
-                                <div className='div-menu cursor-pointer'>
-                                    <div className='icon-admin-menu'>{item.icon}</div>
-                                    <div className='text-admin-menu'>{item.title}</div>
-                                </div>
-                            </Link>
-
-                            {
-                                item.children && item.children.length > 0 && (
-                                    <>
-                                        {
-                                            item.children.map((item, i) => (
-                                                <div className='pl-5' key={item.id} >
-                                                    <Link className='' href={item.path}>
-                                                        <div className='div-menu cursor-pointer py-2!'>
-                                                            <div className='icon-admin-menu'>{item.icon}</div>
-                                                            <div className='text-admin-menu'>{item.title}</div>
-                                                        </div>
-                                                    </Link>
-                                                </div>
-                                            ))
-                                        }
-                                    </>
-                                )
-                            }
-
-                        </div>
+                        <SideBarItem key={item.id} item={item} />
                     ))
                 }
 
@@ -124,6 +97,57 @@ const AdminSidebar = () => {
                     <div className='text-admin-menu'>Logout</div>
                 </div>
             </div>
+        </div>
+    )
+}
+
+
+interface MenuItem {
+    id: string,
+    title: string,
+    path: string,
+    icon: string,
+    children: MenuItem[]
+}
+
+interface ItemProps {
+    item: MenuItem,
+    level?: number;
+}
+
+
+const SideBarItem = ({ item, level = 1 }: ItemProps) => {
+
+    return (
+        <div key={item.id} >
+
+            {
+                item.children && item.children.length > 0 ? (
+                    <>
+
+                        <div className={`div-menu cursor-pointer ${level > 1 && 'py-2.5! pl-5.25!'}`}>
+                            <div className='icon-admin-menu'>{item.icon}</div>
+                            <div className='text-admin-menu'>{item.title}</div>
+                        </div>
+
+                        {
+                            item.children.map((item, i) => (
+                                <SideBarItem key={item.id} item={item} level={level + 1} />
+                            ))
+                        }
+                    </>
+                ) : (
+                    <>
+                        <Link className='' href={item.path}>
+                            <div className={`div-menu cursor-pointer ${level > 1 && 'py-2.5! pl-5.25!'}`}>
+                                <div className='icon-admin-menu'>{item.icon}</div>
+                                <div className='text-admin-menu'>{item.title}</div>
+                            </div>
+                        </Link>
+                    </>
+                )
+            }
+
         </div>
     )
 }

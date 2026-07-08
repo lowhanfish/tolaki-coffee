@@ -38,6 +38,15 @@
     height: 36px;
     @include input
 }
+
+.input-select{
+    height: 36px;
+    @include input
+}
+.input-select-sm{
+    height: 22px;
+    @include input
+}
 .input-file-area{
     height: 36px;
     @include input

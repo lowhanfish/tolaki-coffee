@@ -92,7 +92,7 @@ const Pagination = ({ total, limit }: PaginationProps) => {
                             flex justify-center items-center 
                             p-1 min-h-3 min-w-7
                             rounded-full shadow-sm cursor-pointer`}>
-                            <span className='text-white text-[10px]'>{item}</span>
+                            <p className='text-white text-[10px]'>{item}</p>
                         </button>
                     ))
                 }

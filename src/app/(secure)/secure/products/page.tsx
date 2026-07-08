@@ -10,6 +10,7 @@ import Button from "@/components/items/Button"
 import Modal from "@/components/items/Modal"
 import Create from './components/create';
 import Pagination from '@/components/items/Pagination';
+import SelectListShow from '@/components/items/SelectListShow';
 
 
 
@@ -33,13 +34,14 @@ const Page = () => {
 
     const [modal, SetModal] = useState<boolean>(false)
     const [modalCreate, SetModalCreate] = useState<boolean>(false)
+    const [pageShow, setPageShow] = useState<number | string>(8)
 
     return (
         <div className=''>
             <div className='bg h-15 grid grid-cols-3 px-3'>
                 <div className="col-span-1 flex items-center w-full">
                     <div className="form-input">
-                        <input className="input-form" type="text" />
+                        <input placeholder='Cari Data' className="input-form px-2 text-[14px]" type="text" />
                         <button className="btn-form"
                             onClick={() => SetModalCreate(!modalCreate)}
                         >
@@ -79,9 +81,16 @@ const Page = () => {
                 </div>
 
             </div>
-            <div className='grid grid-cols-2 py-5'>
-                <div className='col-span-1'>
+            <div className='grid grid-cols-12 py-5'>
+                <div className='col-span-10'>
                     <Pagination total={999} limit={5} />
+                </div>
+                <div className='col-span-2'>
+                    <SelectListShow
+                        onChange={(val) => {
+                            setPageShow(val)
+                        }}
+                        size='sm' />
                 </div>
             </div>
 

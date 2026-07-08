@@ -1,7 +1,9 @@
+"use client"
 import Link from 'next/link'
-import React from 'react'
+import { Fragment, useState } from 'react'
 import Image from 'next/image'
 
+import { BsPlay } from "react-icons/bs";
 
 const Menu = [
     {
@@ -87,7 +89,7 @@ const AdminSidebar = () => {
             </div>
             <div className='px-5 pt-2 pb-5'>
                 {
-                    Menu.map((item, index) => (
+                    Menu.map((item) => (
                         <SideBarItem key={item.id} item={item} />
                     ))
                 }
@@ -118,31 +120,53 @@ interface ItemProps {
 
 const SideBarItem = ({ item, level = 1 }: ItemProps) => {
 
+    const paddingL = 5.5;
+    const [isShow, setIshow] = useState(false);
+
     return (
-        <div key={item.id} >
+        <div className='' key={item.id} >
 
             {
                 item.children && item.children.length > 0 ? (
-                    <>
-
-                        <div className={`div-menu cursor-pointer ${level > 1 && 'py-2.5! pl-5.25!'}`}>
+                    <Fragment>
+                        <button
+                            onClick={() => {
+                                setIshow(!isShow)
+                            }}
+                            className={`div-menu w-full cursor-pointer ${level > 1 && 'py-2.5!'}`}
+                            style={{ paddingLeft: `${level > 1 && (paddingL * (level * level))}px` }}
+                        >
                             <div className='icon-admin-menu'>{item.icon}</div>
-                            <div className='text-admin-menu'>{item.title}</div>
-                        </div>
+                            <div className={`text-admin-menu w-full flex items-center ${level <= 2 && 'font-bold'}`}>
+                                <p className='flex-1 text-left'>{item.title}</p>
+                                <div className='w-3.5 flex justify-end'>
+                                    <BsPlay className={`text-[16px] ${isShow && 'rotate-90'}`} />
+                                </div>
+                            </div>
+                        </button>
 
                         {
-                            item.children.map((item, i) => (
-                                <SideBarItem key={item.id} item={item} level={level + 1} />
+                            item.children.map((item) => (
+                                <Fragment key={item.id}>
+                                    {
+                                        isShow && (
+                                            <SideBarItem item={item} level={level + 1} />
+                                        )
+                                    }
+                                </Fragment>
                             ))
                         }
-                    </>
+                    </Fragment>
                 ) : (
                     <>
                         <Link className='' href={item.path}>
-                            <div className={`div-menu cursor-pointer ${level > 1 && 'py-2.5! pl-5.25!'}`}>
+                            <button
+                                className={`div-menu w-full cursor-pointer ${level > 1 && 'py-2.5!'}`}
+                                style={{ paddingLeft: `${level > 1 && (paddingL * (level * level))}px` }}
+                            >
                                 <div className='icon-admin-menu'>{item.icon}</div>
-                                <div className='text-admin-menu'>{item.title}</div>
-                            </div>
+                                <div className={`text-admin-menu ${level <= 2 && 'font-bold'}`}>{item.title}</div>
+                            </button>
                         </Link>
                     </>
                 )

@@ -1,7 +1,11 @@
-import React from 'react'
-import Image from 'next/image';
+"use client"
+
+import { useState, useEffect } from 'react'
 import ItemList from '@/components/items/ItemList'
-import { BsFillPencilFill } from "react-icons/bs";
+import Button from '@/components/items/Button';
+import Create from './components/create';
+
+
 
 const data = [
     {
@@ -21,11 +25,34 @@ const data = [
 
 
 const page = () => {
+
+    const [modal, SetModal] = useState<boolean>(false)
+    const [modalCreate, SetModalCreate] = useState<boolean>(false)
+
+    const saveData = () => {
+
+    }
     return (
         <div>
 
+            <div className='my-5 py-2 border-y-5 border-neutral-200'>
+                <div className='w-30'>
+                    <Button
+                        color="primary"
+                        onClick={() => SetModalCreate(!modalCreate)}
+                    >
+                        <div className="flex gap-2 items-center">
+                            <p>💾</p>
+                            <p className="text-white font-bold text-[12px]">Add Data</p>
+                        </div>
+                    </Button>
+                </div>
 
-            <ItemList title='Image' type='image' />
+
+            </div>
+
+
+            <ItemList title='Image' type='image' image={data[0].img} />
 
             <ItemList title='Brand'>
                 <p className='text-[18px] font-bold'>{data[0].brand}</p>
@@ -39,6 +66,14 @@ const page = () => {
             <ItemList title='Detail'>
                 <p className='text-[13px]'>{data[0].val}</p>
             </ItemList>
+
+
+            <Create
+                modal={modalCreate}
+                SetModal={SetModalCreate}
+            />
+
+
 
         </div>
     )

@@ -78,10 +78,11 @@ const AdminSidebar = () => {
             <div>
                 <Image
                     alt='Card Image'
-                    src={`/images/card.webp`}
-                    className='object-contain'
-                    width={250}
-                    height={25}
+                    src='/images/card.webp'
+                    width={500}
+                    height={300}
+                    className='w-full h-auto object-contain'
+                    loading="eager"
                 />
                 <div className='h-10 w-full bg-linear-to-b from-yellow-800/30 to-amber-50 flex items-center'>
                     <p className='text-[12px] pl-6 pr-2 text-white text-shadow-2xs text-shadow-black/40 font-bold p-2 bg-black/20 w-full'>Kiken Sukma Batara</p>

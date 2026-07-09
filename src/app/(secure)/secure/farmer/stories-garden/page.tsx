@@ -54,29 +54,26 @@ const Page = () => {
                     {
                         [...Array(8)].map((item, index) => (
                             <div key={index} className='col-span-3'>
-                                <div className='relative border-5 border-white shadow-sm rounded-md px-3 py-2 bg-linear-to-r from-white to-yellow-600/10'>
-                                    <p className='text-[15px] text-neutral-600 font-bold'>Konawe Selatan</p>
-                                    <div>
-                                        <div className='flex items-center gap-3'>
-                                            <FaPeopleRoof className='text-amber-500 text-[20px]' />
-                                            <p className='text-[12px] text-amber-700'><span className='font-bold text-[13px] '>120</span> Petani</p>
-                                        </div>
-                                        <div className='flex items-center gap-3'>
-                                            <GiPlantRoots className='text-amber-500 text-[20px]' />
-                                            <p className='text-[12px] text-amber-700'><span className='font-bold text-[13px] '>55</span> Ha</p>
-                                        </div>
-                                        <div className='flex items-center gap-3'>
-                                            <GiMountainRoad className='text-amber-500 text-[20px]' />
-                                            <p className='text-[12px] text-amber-700'><span className='font-bold text-[13px] '>500-1000</span> Mdpl</p>
+                                <div className='bg-linear-to-b from-amber-800/20 to-white border-6 border-white shadow-md rounded-md'>
+                                    <div className='relative h-38 w-full rounded-md'>
+                                        <Image
+                                            alt='Petani'
+                                            src={`/images/petani1.png`}
+                                            fill
+                                            className='object-cover rounded-t-md'
+                                            loading="eager"
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        />
+                                    </div>
+                                    <div className='p-3'>
+                                        <p className='text-[16px] font-bold text-black/60'>Pak Maryan</p>
+                                        <p className='text-[12px] pt-1'>"Kemangi-aroma wangi dari kebun kami adalah hasil dari kesabaran merawat bumi."</p>
+                                        <div className='mt-2'>
+                                            <p className='text-[12px] text-black/50 font-bold'>Konawe Selatan</p>
                                         </div>
                                     </div>
-                                    <button
-                                        onClick={() => SetModal(!modal)}
-                                        className='absolute top-2 right-2 hover:bg-neutral-700/10 rounded-full p-1 cursor-pointer'>
-                                        <FaGear className='text-amber-600' />
-                                    </button>
-                                </div>
 
+                                </div>
                             </div>
                         ))
                     }

@@ -57,20 +57,20 @@ const Page = () => {
                     {
                         [...Array(8)].map((item, index) => (
                             <div key={index} className='col-span-3'>
-                                <div className='relative border-5 border-white shadow-sm rounded-md px-3 py-2 bg-linear-to-r from-white to-yellow-600/10'>
+                                <div className='relative border-5 border-white shadow-sm rounded-md px-3 py-2 bg-linear-to-r from-white to-black/10'>
                                     <p className='text-[15px] text-neutral-600 font-bold'>Konawe Selatan</p>
                                     <div>
                                         <div className='flex items-center gap-3'>
-                                            <FaPeopleRoof className='text-amber-500 text-[20px]' />
-                                            <p className='text-[12px] text-amber-700'><span className='font-bold text-[13px] '>120</span> Petani</p>
+                                            <FaPeopleRoof className='text-amber-800 text-[20px]' />
+                                            <p className='text-[12px] text-amber-700'><span className='font-bold text-[13px] text-neutral-500'>120</span> Petani</p>
                                         </div>
                                         <div className='flex items-center gap-3'>
-                                            <GiPlantRoots className='text-amber-500 text-[20px]' />
-                                            <p className='text-[12px] text-amber-700'><span className='font-bold text-[13px] '>55</span> Ha</p>
+                                            <GiPlantRoots className='text-green-600 text-[20px]' />
+                                            <p className='text-[12px] text-amber-700'><span className='font-bold text-[13px] text-neutral-500'>55</span> Ha</p>
                                         </div>
                                         <div className='flex items-center gap-3'>
-                                            <GiMountainRoad className='text-amber-500 text-[20px]' />
-                                            <p className='text-[12px] text-amber-700'><span className='font-bold text-[13px] '>500-1000</span> Mdpl</p>
+                                            <GiMountainRoad className='text-blue-300 text-[20px]' />
+                                            <p className='text-[12px] text-amber-700'><span className='font-bold text-[13px] text-neutral-500'>500-1000</span> Mdpl</p>
                                         </div>
                                     </div>
                                     <button

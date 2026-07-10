@@ -2,8 +2,8 @@
 
 import { useState } from 'react'
 
-import { BsFillPencilFill, BsFillTrashFill } from "react-icons/bs";
-import { FaMagnifyingGlass } from "react-icons/fa6";
+import { BsFillPencilFill, BsFillTrashFill, } from "react-icons/bs";
+import { FaMagnifyingGlass, FaGear } from "react-icons/fa6";
 
 import Image from "next/image"
 import Button from "@/components/items/Button"
@@ -18,10 +18,10 @@ import SelectListShow from '@/components/items/SelectListShow';
 
 
 const List = [
-    { id: 3, title: "Arabica Coffee", subtitle: "Medium Roast", stock: 12, price: 85000, vol: "200gr", img: "/images/kopi3.png" },
-    { id: 1, title: "Tubruk Robusta", subtitle: "Medium Roast", stock: 12, price: 85000, vol: "200gr", img: "/images/kopi1.png" },
-    { id: 4, title: "Kopi Tolaki", subtitle: "Medium Roast", stock: 12, price: 85000, vol: "200gr", img: "/images/kopi4.png" },
-    { id: 2, title: "Tolaki Robusta", subtitle: "Medium Roast", stock: 12, price: 85000, vol: "200gr", img: "/images/kopi2.png" },
+    { id: 3, title: "Arabica Coffee", subtitle: "Medium Roast (200gr)", stock: 12, price: 85000, vol: "Pack", img: "/images/kopi3.png" },
+    { id: 1, title: "Tubruk Robusta", subtitle: "Medium Roast (200gr)", stock: 12, price: 85000, vol: "Pack", img: "/images/kopi1.png" },
+    { id: 4, title: "Kopi Tolaki", subtitle: "Medium Roast (200gr)", stock: 12, price: 85000, vol: "Pack", img: "/images/kopi4.png" },
+    { id: 2, title: "Tolaki Robusta", subtitle: "Medium Roast (200gr)", stock: 12, price: 85000, vol: "Pack", img: "/images/kopi2.png" },
 ]
 
 
@@ -55,24 +55,33 @@ const Page = () => {
                 <div className="grid grid-cols-12 gap-2">
                     {
                         List.map((item, index) => (
-                            <div key={index} className="col-span-3 p-2 border border-neutral-300 rounded-sm">
-                                <div className="relative h-40">
-                                    <div onClick={() => SetModal(!modal)} className="h-7 w-7 flex justify-center items-center absolute right-1 top-1 bg-amber-200 rounded-full cursor-pointer z-1 border-2 border-white">
-                                        <span className="text-16px">⚙️</span>
+                            <div key={index} className='col-span-3'>
+                                <div className='relative bg-linear-to-b from-amber-800/20 to-white border-6 border-white shadow-md rounded-md'>
+                                    <div className='relative h-38 w-full rounded-md'>
+                                        <Image
+                                            alt='Petani'
+                                            src={item.img}
+                                            fill
+                                            className='object-cover rounded-t-md'
+                                            loading="eager"
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        />
                                     </div>
-                                    <Image
-                                        alt="Image Product"
-                                        src={item.img}
-                                        fill
-                                        className="object-cover"
-                                        priority
-                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                                    />
-                                </div>
-                                <div className="pt-2">
-                                    <p className="text-item-header">{item.title}</p>
-                                    <p className="text-item-body">Stock : <span>{item.stock} pack</span></p>
-                                    <p className="text-[12px] pt-2"><span className="font-bold">@{item.price}</span>/{item.vol}</p>
+                                    <div className='p-3'>
+                                        <p className='text-[16px] font-bold text-black/60'>{item.title}</p>
+                                        <p className='text-[12px] pt-1'>"{item.subtitle}"</p>
+                                        <div className='mt-2'>
+                                            <p className='text-[12px] text-black/50 font-bold'>Stock : {item.stock}-{item.vol}</p>
+                                            <p className='text-[12px] text-black/50 font-bold'>Rp. {item.price}/{item.vol}</p>
+                                        </div>
+                                    </div>
+
+                                    <button
+                                        onClick={() => SetModal(!modal)}
+                                        className='absolute top-1 right-1 hover:bg-neutral-700/60 rounded-full p-1 cursor-pointer'>
+                                        <FaGear className='text-amber-400' />
+                                    </button>
+
                                 </div>
                             </div>
 

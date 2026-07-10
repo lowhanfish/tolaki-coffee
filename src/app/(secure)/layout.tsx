@@ -42,7 +42,7 @@ const layout = ({ children }: ChildrensProps) => {
 
                     <div className='flex-1 p-[7px_7px_0px_7px] overflow-scroll'>
 
-                        <div className='bg-white rounded-md p-[13px_13px_13px_13px]'>
+                        <div className='bg-neutral-50/50 rounded-md p-[13px_13px_13px_13px]'>
                             {children}
                         </div>
                     </div>

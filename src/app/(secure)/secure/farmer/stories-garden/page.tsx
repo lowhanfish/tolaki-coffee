@@ -54,7 +54,7 @@ const Page = () => {
                     {
                         [...Array(8)].map((item, index) => (
                             <div key={index} className='col-span-3'>
-                                <div className='bg-linear-to-b from-amber-800/20 to-white border-6 border-white shadow-md rounded-md'>
+                                <div className='relative bg-linear-to-b from-amber-800/20 to-white border-6 border-white shadow-md rounded-md'>
                                     <div className='relative h-38 w-full rounded-md'>
                                         <Image
                                             alt='Petani'
@@ -72,6 +72,12 @@ const Page = () => {
                                             <p className='text-[12px] text-black/50 font-bold'>Konawe Selatan</p>
                                         </div>
                                     </div>
+
+                                    <button
+                                        onClick={() => SetModal(!modal)}
+                                        className='absolute top-1 right-1 hover:bg-neutral-700/60 rounded-full p-1 cursor-pointer'>
+                                        <FaGear className='text-amber-400' />
+                                    </button>
 
                                 </div>
                             </div>

@@ -33,7 +33,7 @@ const page = () => {
 
     }
     return (
-        <div>
+        <div className='bg-white shadow-sm border-5 border-neutral-300 border-double rounded-xl lg:p-5 p-2 lg:m-10'>
 
             <div className='my-5 py-2 border-y-5 border-neutral-200'>
                 <div className='w-30'>

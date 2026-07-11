@@ -2,6 +2,8 @@ import { ReactNode } from 'react'
 import AdminSidebar from '@/components/AdminSidebar'
 import { IoIosMenu } from "react-icons/io";
 import Image from 'next/image';
+import Link from 'next/link';
+
 
 
 
@@ -28,7 +30,8 @@ const layout = ({ children }: ChildrensProps) => {
                             <p className='text-neutral-600 font-semibold text-[16px]'>Dashboard</p>
                         </div>
                         <div className='flex-1 flex gap-2 items-center justify-end'>
-                            <p className='text-white font-semibold text-[12px]'>Kiken SB</p>
+                            {/* <p className='text-white font-semibold text-[12px]'>Kiken SB</p> */}
+
 
                             <Image
                                 alt='Image User'

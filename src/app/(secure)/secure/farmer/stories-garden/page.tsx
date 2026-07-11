@@ -34,7 +34,7 @@ const Page = () => {
 
     return (
         <div className=''>
-            <div className='bg h-15 grid grid-cols-3 px-3'>
+            <div className='bg h-15 grid grid-cols-3 px-3 rounded-sm shadow-sm'>
                 <div className="col-span-1 flex items-center w-full">
                     <div className="form-input">
                         <input placeholder='Cari Data' className="input-form px-2 text-[14px]" type="text" />

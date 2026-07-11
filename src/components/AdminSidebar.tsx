@@ -70,6 +70,13 @@ const Menu = [
         icon: "📧",
         children: []
     },
+    {
+        id: "7",
+        title: "Back to Website",
+        path: "/home",
+        icon: "🌐",
+        children: []
+    },
 ]
 
 const AdminSidebar = () => {

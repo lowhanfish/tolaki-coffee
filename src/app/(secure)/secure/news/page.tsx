@@ -18,10 +18,14 @@ import SelectListShow from '@/components/items/SelectListShow';
 
 
 const List = [
-    { id: 3, title: "Arabica Coffee", subtitle: "Medium Roast (200gr)", stock: 12, price: 85000, vol: "Pack", img: "/images/kopi3.png" },
-    { id: 1, title: "Tubruk Robusta", subtitle: "Medium Roast (200gr)", stock: 12, price: 85000, vol: "Pack", img: "/images/kopi1.png" },
-    { id: 4, title: "Kopi Tolaki", subtitle: "Medium Roast (200gr)", stock: 12, price: 85000, vol: "Pack", img: "/images/kopi4.png" },
-    { id: 2, title: "Tolaki Robusta", subtitle: "Medium Roast (200gr)", stock: 12, price: 85000, vol: "Pack", img: "/images/kopi2.png" },
+    { id: 3, title: "Arabica Coffee adalah loremp insump kkashdkf kahsdjf asdjkf akjsdf", subtitle: "Medium Roast (200gr)", stock: 12, price: 85000, vol: "Pack", img: "/images/about.png" },
+    { id: 1, title: "Tubruk Robusta", subtitle: "Medium Roast (200gr)", stock: 12, price: 85000, vol: "Pack", img: "/images/about.png" },
+    { id: 4, title: "Kopi Tolaki", subtitle: "Medium Roast (200gr)", stock: 12, price: 85000, vol: "Pack", img: "/images/about.png" },
+    { id: 2, title: "Tolaki Robusta", subtitle: "Medium Roast (200gr)", stock: 12, price: 85000, vol: "Pack", img: "/images/about.png" },
+    { id: 3, title: "Arabica Coffee", subtitle: "Medium Roast (200gr)", stock: 12, price: 85000, vol: "Pack", img: "/images/about.png" },
+    { id: 1, title: "Tubruk Robusta", subtitle: "Medium Roast (200gr)", stock: 12, price: 85000, vol: "Pack", img: "/images/about.png" },
+    { id: 4, title: "Kopi Tolaki", subtitle: "Medium Roast (200gr)", stock: 12, price: 85000, vol: "Pack", img: "/images/about.png" },
+    { id: 2, title: "Tolaki Robusta", subtitle: "Medium Roast (200gr)", stock: 12, price: 85000, vol: "Pack", img: "/images/about.png" },
 ]
 
 
@@ -38,7 +42,7 @@ const Page = () => {
 
     return (
         <div className=''>
-            <div className='bg h-15 grid grid-cols-3 px-3'>
+            <div className='bg h-15 grid grid-cols-3 px-3 shadow-sm rounbde-lg'>
                 <div className="col-span-1 flex items-center w-full">
                     <div className="form-input">
                         <input placeholder='Cari Data' className="input-form px-2 text-[14px]" type="text" />
@@ -55,26 +59,29 @@ const Page = () => {
                 <div className="grid grid-cols-12 gap-2">
                     {
                         List.map((item, index) => (
-                            <div key={index} className='col-span-3'>
-                                <div className='relative bg-linear-to-b from-amber-800/20 to-white border-6 border-white shadow-md rounded-md'>
-                                    <div className='shadow rounded-sm'>
+                            <div key={index} className='col-span-6'>
+                                <div className='relative h-full border-7 border-white rounded-xl shadow-sm'>
+                                    <div className='shadow-sm h-full rounded-lg flex '>
 
-                                        <div className='relative h-38 w-full rounded-md'>
+                                        <div className='relative w-30 h-full rounded-md'>
                                             <Image
+                                                className='object-cover rounded-l-md'
                                                 alt='Petani'
                                                 src={item.img}
                                                 fill
-                                                className='object-cover rounded-t-md'
                                                 loading="eager"
-                                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                             />
                                         </div>
-                                        <div className='p-3 rounded-sm'>
-                                            <p className='text-[16px] font-bold text-black/60'>{item.title}</p>
-                                            <p className='text-[12px] pt-1'>"{item.subtitle}"</p>
-                                            <div className='mt-2'>
-                                                <p className='text-[12px] text-black/50 font-bold'>Stock : {item.stock}-{item.vol}</p>
-                                                <p className='text-[12px] text-black/50 font-bold'>Rp. {item.price}/{item.vol}</p>
+                                        <div className='flex-1 p-3 rounded-sm'>
+                                            <p className='text-[16px] font-bold text-black/60 line-clamp-1'>{item.title}</p>
+
+                                            <div className='flex gap-2 items-center pt-2'>
+                                                <i className="bi bi-clock text-[11px] text-neutral-600"></i>
+                                                <p className='text-[12px] text-neutral-500'>20 Nov 2026</p>
+                                            </div>
+                                            <div className='flex gap-2 items-center'>
+                                                <i className="bi bi-person-circle text-[11px] text-neutral-600"></i>
+                                                <p className='text-[12px] text-neutral-500'>Kiken SB</p>
                                             </div>
                                         </div>
                                     </div>

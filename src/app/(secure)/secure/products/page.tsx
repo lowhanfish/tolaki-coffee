@@ -57,22 +57,25 @@ const Page = () => {
                         List.map((item, index) => (
                             <div key={index} className='col-span-3'>
                                 <div className='relative bg-linear-to-b from-amber-800/20 to-white border-6 border-white shadow-md rounded-md'>
-                                    <div className='relative h-38 w-full rounded-md'>
-                                        <Image
-                                            alt='Petani'
-                                            src={item.img}
-                                            fill
-                                            className='object-cover rounded-t-md'
-                                            loading="eager"
-                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                        />
-                                    </div>
-                                    <div className='p-3'>
-                                        <p className='text-[16px] font-bold text-black/60'>{item.title}</p>
-                                        <p className='text-[12px] pt-1'>"{item.subtitle}"</p>
-                                        <div className='mt-2'>
-                                            <p className='text-[12px] text-black/50 font-bold'>Stock : {item.stock}-{item.vol}</p>
-                                            <p className='text-[12px] text-black/50 font-bold'>Rp. {item.price}/{item.vol}</p>
+                                    <div className='shadow rounded-sm'>
+
+                                        <div className='relative h-38 w-full rounded-md'>
+                                            <Image
+                                                alt='Petani'
+                                                src={item.img}
+                                                fill
+                                                className='object-cover rounded-t-md'
+                                                loading="eager"
+                                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                            />
+                                        </div>
+                                        <div className='p-3 rounded-sm'>
+                                            <p className='text-[16px] font-bold text-black/60'>{item.title}</p>
+                                            <p className='text-[12px] pt-1'>"{item.subtitle}"</p>
+                                            <div className='mt-2'>
+                                                <p className='text-[12px] text-black/50 font-bold'>Stock : {item.stock}-{item.vol}</p>
+                                                <p className='text-[12px] text-black/50 font-bold'>Rp. {item.price}/{item.vol}</p>
+                                            </div>
                                         </div>
                                     </div>
 
